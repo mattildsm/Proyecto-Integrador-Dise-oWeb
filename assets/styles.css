@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@400;700&family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 
 * {
     box-sizing: border-box;
@@ -14,7 +15,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    align-content:center;
+    align-content: center;
     width: 100%;
     height: 130px;
     position: fixed;
@@ -26,7 +27,7 @@ header {
     padding-left: 50px;
 }
 
-.header_logo img{
+.header_logo img {
     height: auto;
     width: 100px;
 }
@@ -97,12 +98,12 @@ li:hover::after {
     gap: 30px;
 }
 
-.header_nav_iconos img{
+.header_nav_iconos img {
     height: 30px;
     width: auto;
 }
 
-#portada{
+#portada {
     background-image: url("../assets/img/pexels-sourav-mishra-7176833.jpg");
     background-position: initial;
     background-repeat: no-repeat;
@@ -129,6 +130,7 @@ li:hover::after {
     font-family: 'Staatliches', cursive;
     color: #ffffff;
     font-size: 80px;
+    max-width: 500px;
     display: flex;
     justify-content: end;
     text-align: center;
@@ -185,7 +187,7 @@ li:hover::after {
 
 .boton:hover {
     z-index: 1;
-    color: rgb(230,168,76);
+    color: rgb(230, 168, 76);
 }
 
 .boton::before {
@@ -211,8 +213,8 @@ li:hover::after {
     align-items: center;
     justify-content: space-around;
     padding: 100px 200px;
-    background: rgb(230,168,76);
-    background: linear-gradient(148deg, rgba(230,168,76,1) 5%, rgba(255,255,255,1) 15%, rgba(230,168,76,1) 45%, rgba(255,255,255,1) 90%, rgba(230,168,76,1) 95%);
+    background: rgb(230, 168, 76);
+    background: linear-gradient(148deg, rgba(230, 168, 76, 1) 5%, rgba(255, 255, 255, 1) 15%, rgba(230, 168, 76, 1) 45%, rgba(255, 255, 255, 1) 90%, rgba(230, 168, 76, 1) 95%);
 }
 
 .seleccion_titulo {
@@ -228,7 +230,7 @@ li:hover::after {
     flex-direction: column;
     align-items: flex-end;
     padding-top: 0px;
-    padding-right: 80px ;
+    padding-right: 80px;
     gap: 30px;
 }
 
@@ -288,8 +290,118 @@ li:hover::after {
 }
 
 @keyframes bar {
-    0% { height: 10px; }
-    50% { height: 24px; }
-    100% { height: 10px; }
+    0% {
+        height: 10px;
+    }
+
+    50% {
+        height: 24px;
+    }
+
+    100% {
+        height: 10px;
+    }
 }
 
+#noticias {
+    background-color: rgba(230, 168, 76, 0.808);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px;
+    gap: 80px;
+}
+
+#noticias h1 {
+    font-family: 'Staatliches', cursive;
+    font-size: 70px;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 420px;
+    height: 700px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.image_container {
+    padding: 25px;
+}
+
+.image_container img{
+    height: 350px;
+    width: 350px;
+    border-radius: 30px;
+}
+
+.text_back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 150px;
+    gap: 10px;
+}
+
+.text_back h2 {
+    max-width: 350px;
+    font-family: 'Staatliches', cursive;
+    font-size: 30px;
+}
+
+.text_back p {
+    max-width: 350px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card .botones {
+    padding-bottom: 25px;
+}
+
+.boton_card {
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000;
+    outline: 3px solid #000000;
+    padding: 25px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+}
+
+.boton_card:hover {
+    z-index: 1;
+    color: #FFFFFF;
+}
+
+.boton_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color:  rgb(230, 168, 76);
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: width 1s;
+}
+
+.boton_card:hover::before {
+    width: 150%;
+}
