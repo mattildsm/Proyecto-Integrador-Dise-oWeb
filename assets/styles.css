@@ -25,6 +25,11 @@ header {
 
 .header_logo {
     padding-left: 50px;
+    transition: 0.3s;
+}
+
+.header_logo:hover {
+    transform: scale(1.15);
 }
 
 .header_logo img {
@@ -46,20 +51,20 @@ header {
     gap: 30px;
 }
 
-ul {
-    width: 700px;
+.header_nav ul {
+    width: 800px;
     display: flex;
     flex-direction: row;
     list-style: none;
     padding: 25px 0;
 }
 
-li {
+.header_nav li {
     position: relative;
     padding: 0;
 }
 
-li::after {
+.header_nav li::after {
     content: "";
     height: 2px;
     width: 100%;
@@ -72,12 +77,15 @@ li::after {
     transition: transform 0.3s ease;
 }
 
-li:hover::after {
+.header_nav li:hover::after {
     transform-origin: bottom center;
     transform: scaleX(1);
 }
 
 .header_nav_lista a {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 10px;
+    border-radius: 10px;
     font-size: 25px;
     color: #ffffff;
     text-decoration: none;
@@ -99,8 +107,13 @@ li:hover::after {
 }
 
 .header_nav_iconos img {
-    height: 30px;
+    height: 40px;
     width: auto;
+    transition: 0.2s;
+}
+
+.header_nav_iconos img:hover {
+    transform: scale(1.15);
 }
 
 #portada {
@@ -123,7 +136,6 @@ li:hover::after {
     flex-direction: column;
     align-items: center;
     padding-top: 120px;
-
 }
 
 .portada_titulo {
@@ -140,7 +152,7 @@ li:hover::after {
 .portada h1 {
     border-radius: 20px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.3)
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .portada_parrafo {
@@ -207,6 +219,121 @@ li:hover::after {
     width: 150%;
 }
 
+#noticias {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(230, 168, 76, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px;
+    gap: 80px;
+}
+
+.titulo {
+    font-family: 'Staatliches', cursive;
+    font-size: 70px;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 420px;
+    height: 720px;
+    background: #FFFFFF;
+    border-radius: 40px 0px 40px 0px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
+}
+
+.image_container {
+    padding: 25px;
+}
+
+.image_container img{
+    height: 350px;
+    width: 350px;
+    border-radius: 30px 0px 30px 0px;
+    transition: 0.2s;
+}
+
+.image_container img:hover {
+    transform: scale(1.1);
+}
+
+.text_back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 150px;
+    gap: 10px;
+}
+
+.text_back h2 {
+    max-width: 350px;
+    font-family: 'Staatliches', cursive;
+    font-size: 30px;
+}
+
+.text_back p {
+    max-width: 350px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card .botones {
+    padding-bottom: 25px;
+}
+
+.card a {
+    display: inline-block;
+    background-color: #FFFFFF;
+}
+
+.boton_card {
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000;
+    outline: 3px solid #000000;
+    padding: 25px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+}
+
+.boton_card:hover {
+    z-index: 1;
+    color: #FFFFFF;
+}
+
+.boton_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color:  rgb(230, 168, 76);
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: width 1s;
+}
+
+.boton_card:hover::before {
+    width: 150%;
+}
 
 #seleccion {
     display: flex;
@@ -234,6 +361,10 @@ li:hover::after {
     gap: 30px;
 }
 
+.music-container:hover {
+    transform: scale(1.15);
+}
+
 .music-container {
     background-color: #ffffff;
     display: flex;
@@ -241,6 +372,8 @@ li:hover::after {
     border-radius: 16px;
     padding: 8px;
     width: max-content;
+    transition: 0.2s;
+    box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
 }
 
 .art {
@@ -303,73 +436,63 @@ li:hover::after {
     }
 }
 
-#noticias {
-    background-color: rgba(230, 168, 76, 0.808);
+#productos {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 80px;
     padding: 100px 0px;
+}
+
+.productos {
+    display: flex;
+    align-items: center;
     gap: 80px;
 }
 
-#noticias h1 {
-    font-family: 'Staatliches', cursive;
-    font-size: 70px;
-}
-
-.tarjetas {
-    display: flex;
-    justify-content: space-around;
-    gap: 100px;
-}
-
-.card {
+.productos_tarjeta {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    width: 420px;
-    height: 700px;
-    background: #FFFFFF;
-    border-radius: 30px;
-    cursor: pointer;
+    border-radius: 40px 0px 40px 0px;
+    outline: 3px solid #000000;
+    width: 350px;
+    height: 470px;
+    box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
+}
+
+.productos_tarjeta_imagen img{
+    width: 250px;
+    padding-top: 20px;
+}
+
+.productos_tarjeta_textos {
+    font-family: 'Staatliches', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productos_tarjeta_textos h2 {
+    max-width: 300px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
     text-align: center;
 }
 
-.image_container {
-    padding: 25px;
-}
-
-.image_container img{
-    height: 350px;
-    width: 350px;
-    border-radius: 30px;
-}
-
-.text_back {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 150px;
-    gap: 10px;
-}
-
-.text_back h2 {
+.productos_tarjeta_textos h3 {
     max-width: 350px;
     font-family: 'Staatliches', cursive;
     font-size: 30px;
+    color:  rgba(0, 0, 0, 0.6);
 }
 
-.text_back p {
-    max-width: 350px;
-    font-family: 'Roboto Slab', serif;
+.productos_boton a {
+    display: inline-block;
+    background-color: #FFFFFF;
 }
 
-.card .botones {
-    padding-bottom: 25px;
-}
-
-.boton_card {
+.boton_prod {
     font-family: 'Staatliches', cursive;
     font-size: 20px;
     border-radius: 20px;
@@ -378,18 +501,18 @@ li:hover::after {
     letter-spacing: 2px;
     color: #000000;
     outline: 3px solid #000000;
-    padding: 25px 40px;
+    padding: 15px 25px;
     position: relative;
     overflow: hidden;
     transition: color 1s;
 }
 
-.boton_card:hover {
+.boton_prod:hover {
     z-index: 1;
     color: #FFFFFF;
 }
 
-.boton_card::before {
+.boton_prod::before {
     content: '';
     position: absolute;
     top: 0;
@@ -402,6 +525,6 @@ li:hover::after {
     transition: width 1s;
 }
 
-.boton_card:hover::before {
+.boton_prod:hover::before {
     width: 150%;
 }
