@@ -1,0 +1,117 @@
+.header_logo:hover {
+    transform: scale(1.15);
+}
+
+.header_nav li::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom center;
+    transition: transform 0.3s ease;
+}
+
+.header_nav li:hover::after {
+    transform-origin: bottom center;
+    transform: scaleX(1);
+}
+
+.header_nav_iconos img:hover {
+    transform: scale(1.15);
+}
+
+.boton:hover {
+    z-index: 1;
+    color: rgb(230, 168, 76);
+}
+
+.boton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: width 1s;
+}
+
+.boton:hover::before {
+    width: 150%;
+}
+
+.image_container img:hover {
+    transform: scale(1.1);
+}
+
+.boton_card:hover {
+    z-index: 1;
+    color: #FFFFFF;
+}
+
+.boton_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color:  rgb(230, 168, 76);
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: width 1s;
+}
+
+.boton_card:hover::before {
+    width: 150%;
+}
+
+.music-container:hover {
+    transform: scale(1.15);
+}
+
+.bar:nth-child(even) {
+    animation-delay: 700ms;
+}
+
+@keyframes bar {
+    0% {
+        height: 10px;
+    }
+
+    50% {
+        height: 24px;
+    }
+
+    100% {
+        height: 10px;
+    }
+}
+
+.boton_prod:hover {
+    z-index: 1;
+    color: #FFFFFF;
+}
+
+.boton_prod::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color:  rgb(230, 168, 76);
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: width 1s;
+}
+
+.boton_prod:hover::before {
+    width: 150%;
+}
