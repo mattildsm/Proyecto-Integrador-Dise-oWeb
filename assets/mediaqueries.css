@@ -184,6 +184,11 @@
         flex-direction: column;
     }
 
+    .contactanos_mapa div {
+        flex-direction: column;
+        font-size: 20px;
+    }
+
     #footer {
         align-items: center;
     }
@@ -196,6 +201,9 @@
     #footer h3 {
         text-align: center;
     }
+
+    .login-box {
+        width: 90%;
 
 
 }

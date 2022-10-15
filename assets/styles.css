@@ -25,7 +25,10 @@ header {
 }
 
 .header_logo {
+    display: flex;
+    align-items: center;
     transition: 0.3s;
+    padding-top: 15px;
 }
 
 .header_logo img {
@@ -452,7 +455,19 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
+}
+
+.contactanos_mapa div {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    gap: 20px;
+}
+
+.contactanos_mapa img {
+    height: 40px;
 }
 
 .contactanos_mapa_titulo {
@@ -556,6 +571,7 @@ header {
 .footer_redes_img img {
     width: 40px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .footer_redes_logo h2 {
@@ -565,4 +581,100 @@ header {
 
 .mini_logo {
     height: 100px;
+    transition: 0.2s;
+}
+
+.main-inicia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 0px;
+    background-image: url("../assets/img/fondo-inicio.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-box {
+    position: relative;
+    width: 600px;
+    max-height: max-content;
+    padding: 40px;
+    background-color: rgba(230, 168, 76, 1);
+    box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
+    outline: 3px solid black;
+    border-radius: 40px 0px;
+}
+
+.login-box h2 {
+    font-family: 'Staatliches', cursive;
+    font-size: 34px;
+    margin: 0 0 30px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.login-box .user-box input {
+    font-family: 'Roboto Slab', serif;
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    font-family: 'Roboto Slab', serif;
+    position: relative;
+    left: 0;
+    top: -60px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#submit {
+    font-family: 'Staatliches', cursive;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    outline: 2px solid #fff;
+    padding: 25px 30px;
+    overflow: hidden;
+    transition: color 1s;
+}
+
+.button-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    gap: 40px;
+}
+
+#register {
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+
+#register a {
+    margin: auto;
+    color: #ffffff;
+    text-decoration: none;
 }

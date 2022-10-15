@@ -1,6 +1,4 @@
-.header_logo:hover {
-    transform: scale(1.15);
-}
+
 
 .header_nav li::after {
     content: "";
@@ -114,4 +112,27 @@
 
 .boton_prod:hover::before {
     width: 150%;
+}
+
+.footer_redes_img img:hover {
+    transform: scale(1.15);
+}
+
+.mini_logo:hover {
+    transform: scale(1.15);
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -85px;
+    left: 0;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+#submit:hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: rgb(230, 168, 76);
+    border-radius: 20px;
+    cursor: pointer;
 }
