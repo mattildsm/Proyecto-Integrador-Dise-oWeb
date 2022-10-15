@@ -1,4 +1,30 @@
+@keyframes slide-right {
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateX(0);
+    }
+    
+}
 
+@keyframes slide-up {
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
+.portada {
+    animation: fade 1s ease-in, slide-right 0.8s ease-in-out;
+}
+
+.login-box {
+    animation: fade 1s ease-in, slide-up 0.8s ease-in-out;
+}
 
 .header_nav li::after {
     content: "";
